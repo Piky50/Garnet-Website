@@ -27,7 +27,7 @@
         }
         
         header {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://lh6.googleusercontent.com/aRZtXm6r_YbbqOBwtMOqWs6PfvRxhD3tzIzYf6VeiZZUkwnaIvxiIYYxJO7EHOIiYZ2FtEfLScVHODWYLs46pW4');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/backgrounds/header-bg.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -256,7 +256,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('https://lh6.googleusercontent.com/44-CLKKEumv2LZxTcgyr8PbN9yKfbVkl289eB7VDr-fo4AAcFDfYgk8FU8wr0DsgdTrkN1kz1tsB4NTkrCy_XWs') center/cover;
+            background: url('images/backgrounds/server-bg.jpg') center/cover;
             opacity: 0.1;
             z-index: 0;
         }
@@ -323,7 +323,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('https://lh6.googleusercontent.com/tumUNJ7VlsTPkxY9rC5-X60sNkcHcImLrTlsVcQMVs-bubVu08EThNolbXEnV98BGWcQFAUfqkNr8Zl51FdJn4Y')
+            background: url('images/backgrounds/footer-bg.jpg');
             opacity: 0.1;
             z-index: 0;
         }
@@ -437,6 +437,105 @@
             opacity: 1;
             transform: none;
         }
+        
+        /* DEPARTMENT BUTTONS */
+        .department-btn {
+            display: inline-block;
+            background: #5865F2; /* Discord blue */
+            color: white !important;
+            padding: 12px 25px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            width: auto;
+            font-size: 1rem;
+        }
+        
+        .department-btn:hover {
+            background: #4752C4;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        .department-info {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .department-info p {
+            flex-grow: 1;
+        }
+        
+        /* Make sure cards have proper spacing */
+        .department-card {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        footer {
+            background-color: #111;
+            padding: 50px 0 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer-logo {
+            width: 150px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .footer-logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 20px 0;
+            padding: 0;
+            gap: 20px;
+        }
+        
+        .social-links a {
+            color: #f0f0f0;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .social-links a:hover {
+            color: #d4af37;
+            transform: translateY(-3px) scale(1.2);
+        }
+        
+        .copyright {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+        
+        /* Bounce animation for scroll indicator */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-20px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-10px) translateX(-50%);
+            }
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -451,9 +550,8 @@
 
     <!-- Hero Section -->
     <header id="home">
-        <!-- INSERT MAIN LOGO HERE (with optional link) -->
-            <img src="https://lh4.googleusercontent.com/pRqsDQAI6nSnnft1KZhqvWz2wG29ZmFw8rBe_sp8qfAV_ZlFlfXB5Z4x03GXCeyeYqJXDkJNPyDL_DPIJteoYJw" alt="Garnet Roleplay" class="logo">
-        </a>
+        <!-- Main Logo -->
+        <img src="images/logo.png" alt="Garnet Roleplay" class="logo">
         
         <div class="hero-text">
             <h1>Garnet Roleplay</h1>
@@ -467,95 +565,50 @@
         </div>
     </header>
 
-<section id="departments" class="container">
-    <h2 class="section-title">Our Departments</h2>
-    <div class="departments">
-        <!-- LSCSO -->
-        <div class="department-card">
-            <img src="https://lh3.googleusercontent.com/Co8lCH2rrGiropVzmBA7KgfQef9bE2f7K7Pwnc_W8UOXHUPDTX3pJCDue-lGey535ZWvgVE8uhWxKnLWqlO9bY4">
-            <div class="department-info">
-                <h3>Los Santos County Sheriff's Office</h3>
-                <p>Maintaining law and order across the county with professional policing standards and community engagement.</p>
-                <a href="https://discord.gg/MpyBrFePnf" class="department-btn" target="_blank">Join Discord</a>
+    <section id="departments" class="container">
+        <h2 class="section-title">Our Departments</h2>
+        <div class="departments">
+            <!-- LSCSO -->
+            <div class="department-card">
+                <img src="images/departments/lscso.jpg" alt="LSCSO" class="department-img">
+                <div class="department-info">
+                    <h3>Los Santos County Sheriff's Office</h3>
+                    <p>Maintaining law and order across the county with professional policing standards and community engagement.</p>
+                    <a href="https://discord.gg/MpyBrFePnf" class="department-btn" target="_blank">Join Discord</a>
+                </div>
+            </div>
+            
+            <!-- SAFR -->
+            <div class="department-card">
+                <img src="images/departments/safr.jpg" alt="SAFR" class="department-img">
+                <div class="department-info">
+                    <h3>San Andreas Fire Rescue</h3>
+                    <p>Providing emergency medical services, fire suppression, and technical rescue operations across the state.</p>
+                    <a href="https://discord.gg/7dw8WxkbFg" class="department-btn" target="_blank">Join Discord</a>
+                </div>
+            </div>
+            
+            <!-- SCP -->
+            <div class="department-card">
+                <img src="images/departments/scp.jpg" alt="SCP" class="department-img">
+                <div class="department-info">
+                    <h3>SCP Foundation</h3>
+                    <p>Secure, Contain, Protect. Our mission is to safeguard humanity from anomalous entities, objects, and phenomena that defy natural law.</p>
+                    <a href="https://discord.gg/2wDfRFDakV" class="department-btn" target="_blank">Join Discord</a>
+                </div>
+            </div>
+            
+            <!-- DOJ -->
+            <div class="department-card">
+                <img src="images/departments/doj.jpg" alt="DOJ" class="department-img">
+                <div class="department-info">
+                    <h3>Department of Justice</h3>
+                    <p>Ensuring the fair administration of justice for all citizens through prosecution, legal counsel, and judicial oversight.</p>
+                    <a href="https://discord.gg/n7kDKXBmyr" class="department-btn" target="_blank">Join Discord</a>
+                </div>
             </div>
         </div>
-        
-        <!-- SAFR -->
-        <div class="department-card">
-            <img src="https://lh5.googleusercontent.com/XNQCsVdDkKiFyUUB3Z-XWD8cHBbMtRnynqNRarNIPR0X0HKcSXP1zpJW5YO09tVcns8rEg15cXSKL5e5843d9gM" alt="SAFR" class="department-img">
-            <div class="department-info">
-                <h3>San Andreas Fire Rescue</h3>
-                <p>Providing emergency medical services, fire suppression, and technical rescue operations across the state.</p>
-                <a href="https://discord.gg/7dw8WxkbFg" class="department-btn" target="_blank">Join Discord</a>
-            </div>
-        </div>
-        
-        <!-- SCP -->
-        <div class="department-card">
-            <img src="https://lh5.googleusercontent.com/iMDGQywle9YgOdQ_To90DldpL6WdsaPKqX6UGLB4nTZlAxHBgxcoN7iKJcNZIIy5HhEM-kGKOw_HfwdvXuY8fuo">
-            <div class="department-info">
-                <h3>SCP Foundation</h3>
-                <p>Secure, Contain, Protect. Our mission is to safeguard humanity from anomalous entities, objects, and phenomena that defy natural law.</p>
-                <a href="https://discord.gg/2wDfRFDakV" class="department-btn" target="_blank">Join Discord</a>
-            </div>
-        </div>
-        
-
-        <!-- DOJ -->
-        <div class="department-card">
-            <img src="https://www.shutterstock.com/shutterstock/videos/1066001308/thumb/1.jpg?ip=x480" alt="DOJ" class="department-img">
-            <div class="department-info">
-                <h3>Department of Justice</h3>
-                <p>Ensuring the fair administration of justice for all citizens through prosecution, legal counsel, and judicial oversight.</p>
-                <a href="https://discord.gg/n7kDKXBmyr" class="department-btn" target="_blank">Join Discord</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ADD THIS CSS TO YOUR STYLESHEET -->
-<style>
-    /* DEPARTMENT BUTTONS - MAKE SURE THIS IS IN YOUR CSS */
-    .department-btn {
-        display: inline-block;
-        background: #5865F2; /* Discord blue */
-        color: white !important;
-        padding: 12px 25px;
-        border-radius: 4px;
-        text-decoration: none;
-        font-weight: 600;
-        text-align: center;
-        margin-top: 15px;
-        transition: all 0.3s ease;
-        border: none;
-        cursor: pointer;
-        width: auto;
-        font-size: 1rem;
-    }
-    
-    .department-btn:hover {
-        background: #4752C4;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-    
-    .department-info {
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
-    
-    .department-info p {
-        flex-grow: 1;
-    }
-    
-    /* Make sure cards have proper spacing */
-    .department-card {
-        display: flex;
-        flex-direction: column;
-    }
-</style>
+    </section>
 
     <!-- Server Features -->
     <section id="features" class="server-info">
@@ -594,28 +647,22 @@
         <h2 class="section-title">Gallery</h2>
         <div class="gallery">
             <div class="gallery-item">
-                <!-- INSERT GALLERY IMAGE 1 HERE -->
-                <img src="https://lh6.googleusercontent.com/rKKam1MWbCc0L7v9J06KdKND6HiEnzjRNdnJUv6gEo3vFV57pu1Z3GBB2XqeWs8mZc1y9zYnSbuKmgO2HVXfow" alt="Server Screenshot">
+                <img src="images/gallery/gallery1.jpg" alt="Server Screenshot">
             </div>
             <div class="gallery-item">
-                <!-- INSERT GALLERY IMAGE 2 HERE -->
-                <img src="https://lh4.googleusercontent.com/8lLkiDrKXlMn79-p9l87MgPo-jXtVlYnwgwLH7LE7a7AzQ62I3aXr2dy2N5yHob4OjCpq8Ph6q7-5ml9EC5Njac" alt="Server Screenshot">
+                <img src="images/gallery/gallery2.jpg" alt="Server Screenshot">
             </div>
             <div class="gallery-item">
-                <!-- INSERT GALLERY IMAGE 3 HERE -->
-                <img src="https://lh3.googleusercontent.com/ZsXvqG3ZAAbDz5d_TF_HjqGt1w_n-g5Yp8jEoZGYhgX8gt-8FF49gz8qzYwQmr7AQpP8Ed7yMh7p44MTAKSMebg" alt="Server Screenshot">
+                <img src="images/gallery/gallery3.jpg" alt="Server Screenshot">
             </div>
             <div class="gallery-item">
-                <!-- INSERT GALLERY IMAGE 4 HERE -->
-                <img src="https://lh4.googleusercontent.com/dbnYd2MpceTZ4_SMA4RZg-kRXazZZUpapfexbE25352akvfdEdf3m_yYWWPqAEfGNGzCqHNCgfzaoiJDkN0IlIU" alt="Server Screenshot">
+                <img src="images/gallery/gallery4.jpg" alt="Server Screenshot">
             </div>
             <div class="gallery-item">
-                <!-- INSERT GALLERY IMAGE 5 HERE -->
-                <img src="https://lh3.googleusercontent.com/LAQPCcVKdqs5IaQJM1VSgmYuUsbILagFhkDMwUyg4zLMZehdmfI0LY0gZP921tNshE3hUSGbGGoX6q2jg4YihPQ">
+                <img src="images/gallery/gallery5.jpg" alt="Server Screenshot">
             </div>
             <div class="gallery-item">
-                <!-- INSERT GALLERY IMAGE 6 HERE -->
-                <img src="https://lh3.googleusercontent.com/KJBo_Du62cWFrfRffFilG3f0cN838cZWxiwfbOYopgQSZTYjUfYBjErFn5HYTa4So8HxcAY4cgLWaYLhhDS2MA" alt="Server Screenshot">
+                <img src="images/gallery/gallery6.jpg" alt="Server Screenshot">
             </div>
         </div>
     </section>
@@ -630,70 +677,22 @@
         </div>
     </section>
 
-<!-- Footer - Replace your existing footer with this -->
-<footer>
-    <!-- Main Logo with Discord Link -->
-    <a href="https://discord.gg/X28CS6DtGU" target="_blank">
-        <img src="https://lh4.googleusercontent.com/pRqsDQAI6nSnnft1KZhqvWz2wG29ZmFw8rBe_sp8qfAV_ZlFlfXB5Z4x03GXCeyeYqJXDkJNPyDL_DPIJteoYJw" alt="Garnet Roleplay" class="footer-logo">
-    </a>
-    
-    <!-- Social Media Links - Replace # with your actual links -->
-    <ul class="social-links">
-        <li><a href="https://discord.gg/X28CS6DtGU" target="_blank" aria-label="Discord"><i class="fab fa-discord"></i></a></li>
-        <li><a href="https://www.youtube.com/@Garnet_Roleplay" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
-        <li><a href="https://tiktok.com/@garnet_roleplay" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></li>
-    </ul>
-    
-    <p class="copyright">© 2025 Garnet Roleplay. All rights reserved.</p>
-
-
-</footer>
-<style>
-    footer {
-        background-color: #111;
-        padding: 50px 0 20px;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .footer-logo {
-        width: 150px;
-        margin-bottom: 20px;
-        transition: transform 0.3s ease;
-    }
-    
-    .footer-logo:hover {
-        transform: scale(1.05);
-    }
-    
-    .social-links {
-        display: flex;
-        justify-content: center;
-        list-style: none;
-        margin: 20px 0;
-        padding: 0;
-        gap: 20px;
-    }
-    
-    .social-links a {
-        color: #f0f0f0;
-        font-size: 1.5rem;
-        transition: all 0.3s ease;
-        display: inline-block;
-    }
-    
-    .social-links a:hover {
-        color: #d4af37;
-        transform: translateY(-3px) scale(1.2);
-    }
-    
-    .copyright {
-        margin-top: 30px;
-        font-size: 0.9rem;
-        color: #777;
-    }
-</style>
+    <!-- Footer -->
+    <footer>
+        <!-- Main Logo with Discord Link -->
+        <a href="https://discord.gg/X28CS6DtGU" target="_blank">
+            <img src="images/logo.png" alt="Garnet Roleplay" class="footer-logo">
+        </a>
+        
+        <!-- Social Media Links -->
+        <ul class="social-links">
+            <li><a href="https://discord.gg/X28CS6DtGU" target="_blank" aria-label="Discord"><i class="fab fa-discord"></i></a></li>
+            <li><a href="https://www.youtube.com/@Garnet_Roleplay" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+            <li><a href="https://tiktok.com/@garnet_roleplay" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></li>
+        </ul>
+        
+        <p class="copyright">© 2025 Garnet Roleplay. All rights reserved.</p>
+    </footer>
 
     <script>
         // Smooth scrolling for anchor links
