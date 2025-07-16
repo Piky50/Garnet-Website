@@ -13,21 +13,12 @@ This is the official website for the Garnet Roleplay FiveM server, a premium rol
 
 ## Departments
 
-- Los Santos County Sheriff's Office
+- Los Santos Police Department
 - San Andreas Fire Rescue
 - SCP Foundation
 - Department of Justice
 
-## Setup Instructions
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/yourusername/garnet-roleplay-website.git
-cd garnet-roleplay-website
-```
-
-### 2. Images Setup
+### 1. Images Setup
 
 Create an images folder structure and add your images:
 
@@ -35,25 +26,26 @@ Create an images folder structure and add your images:
 images/
 ├── logo.png                   # Main Garnet logo
 ├── backgrounds/
-│   ├── header-bg.jpg          # Header background
-│   └── footer-bg.jpg          # Footer background
+│   ├── header-bg.png          # Header background
+│   └── footer-bg.png          # Footer background
 ├── departments/
-│   ├── lscso.jpg              # Sheriff's Office 
-│   ├── safr.jpg               # Fire Rescue
-│   ├── scp.jpg                # SCP Foundation
-│   └── doj.jpg                # Department of Justice
+│   ├── lspd.png               # Police Department
+│   ├── safr.png               # Fire Rescue
+│   ├── scp.png                # SCP Foundation
+│   └── doj.png                # Department of Justice
 └── gallery/
-    ├── gallery1.jpg           # Gallery images
-    ├── gallery2.jpg
+    ├── gallery1.png           # Gallery images
+    ├── gallery2.png
     └── ...
 ```
 
-### 3. GitHub Pages Setup
+### 2. GitHub Pages Setup
 
 This repository is configured to automatically deploy to GitHub Pages when changes are pushed to the main branch. No additional setup is required.
 
 ## Join Our Community
 
+- Guidebook: [https://garnet-roleplay.gitbook.io](https://garnet-roleplay.gitbook.io)
 - Discord: [https://discord.gg/X28CS6DtGU](https://discord.gg/X28CS6DtGU)
 - YouTube: [@Garnet_Roleplay](https://www.youtube.com/@Garnet_Roleplay)
 - TikTok: [@garnet_roleplay](https://tiktok.com/@garnet_roleplay)
